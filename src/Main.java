@@ -3,7 +3,10 @@ public class Main {
         int count = 0;
         int i = 0;
         while (i < inputStr.length() - 1) {
-            if (inputStr.charAt(i) == 'a' && (inputStr.charAt(i+1) == 'a' || inputStr.charAt(i+1) == 'w')) {
+            if(inputStr.charAt(i) == 'w'){
+                count++;
+                i++;
+            } else if (inputStr.charAt(i) == 'a' && (inputStr.charAt(i+1) == 'a' || inputStr.charAt(i+1) == 'w')) {
                 count++;
                 i += 2;
             } else if (inputStr.charAt(i) == 'o' && (inputStr.charAt(i+1) == 'o' || inputStr.charAt(i+1) == 'w')) {
